@@ -28,17 +28,18 @@ public class Row
     {
         this.next = next;
     }
-    public void addCell()
+    public void addCell(int value,int row,int column)
     {
+        Cell cell= new Cell(value,row,column);
         if(this.head==null)
         {
-            this.head=new Cell();
+            this.head=cell;
         }
         else
         {
             Cell temp = this.head;
             while(temp.getNext()!=null) {temp=temp.getNext();}
-            temp.setNext(new Cell());
+            temp.setNext(cell);
         }
         this.length++;
     }

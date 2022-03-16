@@ -4,10 +4,14 @@ public class Cell
 {
     private int value;
     private Cell next;
+    private int row;
+    private int column;
 
-    public Cell()
+    public Cell(int value,int row,int column)
     {
-        this.value=0;
+        this.value=value;
+        this.row=row;
+        this.column=column;
         this.next=null;
     }
 
@@ -29,5 +33,15 @@ public class Cell
     public void setNext(Cell next)
     {
         this.next = next;
+    }
+
+    public int getRow()
+    {
+        return row;
+    }
+
+    public int getColumn()
+    {
+        return column;
     }
 }
